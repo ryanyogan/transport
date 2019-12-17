@@ -7,7 +7,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/ryanyogan/consignment-service/proto/consignment"
+	pb "github.com/ryanyogan/transport/consignment-service/proto/consignment"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

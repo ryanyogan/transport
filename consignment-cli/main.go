@@ -2,12 +2,13 @@ package main
 
 import (
 	"context"
+	"sync"
 	"encoding/json"
 	"io/ioutil"
 	"log"
 	"os"
 
-	"github.com/ryanyogan/consignment-service/proto/consignment"
+	"github.com/ryanyogan/transport/consignment-service/proto/consignment"
 	"google.golang.org/grpc"
 )
 
@@ -15,6 +16,7 @@ const (
 	address         = "localhost:50051"
 	defaultFilename = "consignment.json"
 )
+
 
 func parseFile(file string) (*consignment.Consignment, error) {
 	var consignment *consignment.Consignment
